@@ -1,0 +1,3 @@
+#root {
+	@apply min-h-dvh min-w-dvw max-h-dvh max-w-dvw;
+}
