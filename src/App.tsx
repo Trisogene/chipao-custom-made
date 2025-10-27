@@ -1,10 +1,12 @@
 import "./App.css";
+import { ThemeProvider } from "./components/theme-provider/theme-provider";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
 	return (
-		<div>
-			<p> Hello, world! </p>
-		</div>
+		<ThemeProvider defaultTheme="light">
+				<Dashboard />
+		</ThemeProvider>
 	);
 }
 

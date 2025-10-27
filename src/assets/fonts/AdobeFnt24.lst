@@ -1,0 +1,169 @@
+%!Adobe-FontList 1.24
+%Locale:0x804
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GeneralSansVariable-Bold
+FamilyName:General Sans Variable
+StyleName:Bold
+FullName:General Sans Variable Bold
+MenuName:General Sans Variable
+FamilyPrefix:GeneralSansVariable
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\GeneralSans-Variable.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:110820
+FileModTime:1753946268
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,General Sans Variable
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IBMPlexSans-Bold
+FamilyName:IBM Plex Sans
+StyleName:Bold
+FullName:IBM Plex Sans Bold
+MenuName:IBM Plex Sans
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\IBMPlexSans-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218212
+FileModTime:1753971163
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,IBM Plex Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IBMPlexSans-Light
+FamilyName:IBM Plex Sans
+StyleName:Light
+FullName:IBM Plex Sans Light
+MenuName:IBM Plex Sans Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\IBMPlexSans-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218848
+FileModTime:1753971163
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,IBM Plex Sans Light
+NameArray:0,Win,16,IBM Plex Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IBMPlexSans-Regular
+FamilyName:IBM Plex Sans
+StyleName:Regular
+FullName:IBM Plex Sans Regular
+MenuName:IBM Plex Sans
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\IBMPlexSans-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218236
+FileModTime:1753971163
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,IBM Plex Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IBMPlexSans-Thin
+FamilyName:IBM Plex Sans
+StyleName:Thin
+FullName:IBM Plex Sans Thin
+MenuName:IBM Plex Sans Thin
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\IBMPlexSans-Thin.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218724
+FileModTime:1753971163
+WeightClass:250
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,IBM Plex Sans Thin
+NameArray:0,Win,16,IBM Plex Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Candara
+FamilyName:Candara
+StyleName:Regular
+FullName:Candara
+MenuName:Candara
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\candara.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:219532
+FileModTime:1575713317
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Candara
+NameArray:0,Win,1,Candara
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Candara-Bold
+FamilyName:Candara
+StyleName:Bold
+FullName:Candara Bold
+MenuName:Candara
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\“websito”文件夹1\Document fonts\candarab.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:227604
+FileModTime:1651900763
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Candara Bold
+NameArray:0,Win,1,Candara
+%EndFont
+
