@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 function App() {
 	return (
 		<ThemeProvider defaultTheme="light">
-				<Dashboard />
+			<Dashboard />
 		</ThemeProvider>
 	);
 }

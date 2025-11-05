@@ -1,61 +1,81 @@
+import story1 from "@/assets/images/story-1.jpg";
+import story2 from "@/assets/images/story-2.jpg";
+import story3 from "@/assets/images/story-3.jpg";
+import story4 from "@/assets/images/story-4.jpg";
+
 const Story = () => {
 	return (
-		<section id="story" className="py-20 bg-gray-50">
-			<div className="container mx-auto px-4">
-				<div className="max-w-6xl mx-auto">
-					<h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
-						La Nostra Storia
-					</h2>
-					
-					<div className="grid md:grid-cols-2 gap-8 mb-12">
-						<div className="relative">
-							<img 
-								src="/src/assets/images/图片_20241011215742.jpg" 
-								alt="La nostra storia 1" 
-								className="rounded-lg shadow-lg w-full h-auto object-cover"
-							/>
-						</div>
-						<div className="relative">
-							<img 
-								src="/src/assets/images/图片_20241011215752.jpg" 
-								alt="La nostra storia 2" 
-								className="rounded-lg shadow-lg w-full h-auto object-cover"
-							/>
-						</div>
+		<section
+			id="story"
+			className="flex flex-col items-center justify-center p-8 bg-gray-50 border-y border-gray-200"
+		>
+			{/* Section Title */}
+			<div className="text-center mb-8">
+				<h2
+					className="text-3xl sm:text-4xl md:text-5xl font-thin tracking-wide mb-4"
+					style={{
+						fontFamily: "GeneralSans",
+						fontWeight: "200",
+					}}
+				>
+					OUR CRAFTMANSHIP
+				</h2>
+				<p className="text-sm sm:text-base tracking-widest text-gray-600 max-w-2xl mx-auto">
+					THE ART OF EMBROIDERY
+				</p>
+			</div>
+
+			<div className="w-full max-w-7xl">
+				<div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+					{/* Text Left */}
+					<div className="space-y-4 md:space-y-6">
+						<h2
+							className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin"
+							style={{
+								fontFamily: "GeneralSans",
+								fontWeight: "200",
+							}}
+						>
+							EMBROIDERY & CRAFTMENSHIP
+						</h2>
+
+						<p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 font-light">
+							The four major regional styles of Chinese embroidery are Suzhou
+							embroidery, Hunan embroidery, Guangdong embroidery and Sichuan
+							embroidery. All of them are nominated as Chinese Intangible
+							Cultural Heritage. The artist embroiders the canvas with vibrant
+							colors, bringing the painting to life.
+						</p>
 					</div>
 
-					<div className="space-y-8">
-						<div className="bg-white p-8 rounded-lg shadow-md">
-							<h3 className="text-2xl font-bold text-red-600 mb-4">L'Inizio</h3>
-							<p className="text-lg text-gray-700 leading-relaxed">
-								La storia di CHIPAO inizia con una passione profonda per la sartoria e il desiderio di creare qualcosa di unico. Fondata da maestri sarti con esperienza decennale, la nostra azienda nasce dall'incontro tra due culture: quella italiana, famosa per la sua eccellenza artigianale, e quella cinese, ricca di tradizione e raffinatezza.
-							</p>
-						</div>
-
-						<div className="bg-white p-8 rounded-lg shadow-md">
-							<h3 className="text-2xl font-bold text-red-600 mb-4">La Tradizione</h3>
-							<p className="text-lg text-gray-700 leading-relaxed">
-								Ogni capo che realizziamo è il risultato di un processo artigianale meticoloso che rispetta le tecniche tradizionali di sartoria. Dalla scelta dei tessuti pregiati alla presa delle misure, dalla progettazione del modello alle rifiniture finali, ogni fase è curata nei minimi dettagli per garantire un prodotto di altissima qualità.
-							</p>
-						</div>
-
-						<div className="bg-white p-8 rounded-lg shadow-md">
-							<h3 className="text-2xl font-bold text-red-600 mb-4">L'Evoluzione</h3>
-							<p className="text-lg text-gray-700 leading-relaxed">
-								Nel corso degli anni, CHIPAO si è evoluta mantenendo salde le proprie radici artigianali ma guardando sempre al futuro. Oggi offriamo non solo abiti tradizionali su misura, ma anche servizi di noleggio per eventi speciali, permettendo a tutti di vivere l'esperienza di indossare un capo esclusivo e perfettamente calibrato sulle proprie esigenze.
-							</p>
-						</div>
-
-						<div className="grid md:grid-cols-2 gap-8 mt-8">
-							<img 
-								src="/src/assets/images/图片_20241011221608.jpg" 
-								alt="Dettaglio artigianale 1" 
-								className="rounded-lg shadow-lg w-full h-auto object-cover"
+					{/* Images Right - Grid 2x2 */}
+					<div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+						<div className="aspect-square">
+							<img
+								src={story1}
+								alt="Embroidery detail 1"
+								className="w-full h-full object-cover rounded-md"
 							/>
-							<img 
-								src="/src/assets/images/图片_20241011221622.jpg" 
-								alt="Dettaglio artigianale 2" 
-								className="rounded-lg shadow-lg w-full h-auto object-cover"
+						</div>
+						<div className="aspect-square">
+							<img
+								src={story2}
+								alt="Embroidery detail 2"
+								className="w-full h-full object-cover rounded-md"
+							/>
+						</div>
+						<div className="aspect-square">
+							<img
+								src={story3}
+								alt="Embroidery detail 3"
+								className="w-full h-full object-cover rounded-md"
+							/>
+						</div>
+						<div className="aspect-square">
+							<img
+								src={story4}
+								alt="Embroidery detail 4"
+								className="w-full h-full object-cover rounded-md"
 							/>
 						</div>
 					</div>

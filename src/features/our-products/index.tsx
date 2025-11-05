@@ -1,95 +1,72 @@
-import { Card, CardContent } from "@/components/ui/card";
+import ourProduct1 from "@/assets/images/our-product-1.jpg";
+import ourProduct2 from "@/assets/images/our-product-2.jpg";
+import ourProduct3 from "@/assets/images/our-product-3.jpg";
 
 const OurProducts = () => {
 	const products = [
 		{
 			id: 1,
-			title: "Abiti Tradizionali",
-			description: "Chipao e abiti tradizionali cinesi realizzati su misura con tessuti pregiati e ricami artigianali",
-			image: "/src/assets/images/图片_20241014182512.jpg"
+			title: "BRIDAL QIPAO",
+			description:
+				"Modern love, timeless tradition. Our bridal qipaos blend the elegance of Chinese craftsmanship with the structure and softness of modern wedding design. These beautiful pieces bridge two worlds. Think ivory silks, subtle embroidery, and silhouettes that speak both languages.",
+			image: ourProduct1,
 		},
 		{
 			id: 2,
-			title: "Abiti Eleganti",
-			description: "Creazioni eleganti per cerimonie ed eventi speciali, perfetti per ogni occasione importante",
-			image: "/src/assets/images/图片_20241014183449.jpg"
+			title: "MODERN QIPAO",
+			description:
+				"Qipao for Daily Life. With updated cuts, playful fabrics, and minimalist detailing, our modern qipaos are designed for everyday elegance or bold styling moments. They're fashion with intention — perfect for the confident woman redefining what it means to wear Chinese style today.",
+			image: ourProduct2,
 		},
 		{
 			id: 3,
-			title: "Abiti Moderni",
-			description: "Design contemporaneo che unisce tradizione e modernità per un look unico ed esclusivo",
-			image: "/src/assets/images/图片_20241014184310.jpg"
+			title: "TRADITIONAL QIPAO",
+			description:
+				"Grace in its purest form. Traditional qipaos honor the original silhouette and symbolism of Chinese dress, featuring mandarin collars, full-length cuts, and rich colors. Hand-finished embroidery. Ideal for cultural events, tea ceremonies, or those seeking a deeper connection to their roots.",
+			image: ourProduct3,
 		},
-		{
-			id: 4,
-			title: "Alta Sartoria",
-			description: "Abiti di alta sartoria realizzati con materiali di prima scelta e attenzione ai dettagli",
-			image: "/src/assets/images/图片_20250114123730.jpg"
-		},
-		{
-			id: 5,
-			title: "Collezione Esclusiva",
-			description: "Pezzi unici della nostra collezione esclusiva, pensati per chi cerca la massima raffinatezza",
-			image: "/src/assets/images/图片_20250114124927.jpg"
-		},
-		{
-			id: 6,
-			title: "Su Misura",
-			description: "Ogni abito è realizzato completamente su misura seguendo le tue preferenze e caratteristiche",
-			image: "/src/assets/images/AF-1.jpg"
-		}
 	];
 
 	return (
-		<section id="products" className="py-20 bg-white">
-			<div className="container mx-auto px-4">
-				<div className="max-w-6xl mx-auto">
-					<h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900">
-						I Nostri Prodotti
-					</h2>
-					<p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-						Scopri la nostra collezione di abiti su misura, dove ogni capo è un'opera d'arte creata appositamente per te
-					</p>
-
-					<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{products.map((product) => (
-							<Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-								<div className="aspect-3/4 overflow-hidden">
-									<img 
-										src={product.image} 
-										alt={product.title}
-										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-									/>
-								</div>
-								<CardContent className="p-6">
-									<h3 className="text-xl font-bold text-gray-900 mb-3">{product.title}</h3>
-									<p className="text-gray-600 leading-relaxed">{product.description}</p>
-								</CardContent>
-							</Card>
-						))}
+		<section id="products" className="p-8 bg-gray-50 border-y border-gray-200">
+			<div className="container mx-auto px-6">
+				<div className="max-w-7xl mx-auto">
+					{/* Section Title */}
+					<div className="text-center mb-8">
+						<h2
+							className="text-3xl sm:text-4xl md:text-5xl font-thin tracking-wide mb-4"
+							style={{
+								fontFamily: "GeneralSans",
+								fontWeight: "200",
+							}}
+						>
+							OUR PRODUCTS
+						</h2>
+						<p className="text-sm sm:text-base tracking-widest text-gray-600 max-w-2xl mx-auto">
+							DISCOVER OUR COLLECTION
+						</p>
 					</div>
 
-					<div className="mt-16 bg-red-50 p-8 rounded-lg">
-						<h3 className="text-2xl font-bold text-center text-red-600 mb-4">
-							Perché Scegliere i Nostri Prodotti?
-						</h3>
-						<div className="grid md:grid-cols-3 gap-8 mt-8">
-							<div className="text-center">
-								<div className="text-4xl mb-4">✨</div>
-								<h4 className="font-bold text-lg mb-2">Qualità Superiore</h4>
-								<p className="text-gray-600">Utilizziamo solo tessuti pregiati e materiali di prima scelta</p>
+					<div className="grid lg:grid-cols-3 gap-12">
+						{products.map((product) => (
+							<div key={product.id} className="space-y-6">
+								<h3 className="text-lg sm:text-xl tracking-widest font-medium text-center">
+									{product.title}
+								</h3>
+								<div className="aspect-auto lg:aspect-3/4 overflow-hidden">
+									<img
+										src={product.image}
+										alt={product.title}
+										className={`w-full h-[50dvh] object-cover rounded-md lg:h-full ${
+											product.id === 1 ? "object-[center_60%]" : ""
+										}`}
+									/>
+								</div>
+								<p className="text-sm sm:text-base leading-relaxed text-gray-700 text-justify">
+									{product.description}
+								</p>
 							</div>
-							<div className="text-center">
-								<div className="text-4xl mb-4">👔</div>
-								<h4 className="font-bold text-lg mb-2">Su Misura</h4>
-								<p className="text-gray-600">Ogni capo è realizzato seguendo le tue misure esatte</p>
-							</div>
-							<div className="text-center">
-								<div className="text-4xl mb-4">🎨</div>
-								<h4 className="font-bold text-lg mb-2">Design Unico</h4>
-								<p className="text-gray-600">Creazioni esclusive che riflettono il tuo stile personale</p>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

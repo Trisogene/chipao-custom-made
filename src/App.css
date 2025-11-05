@@ -1,3 +1,4 @@
-#root {
-	@apply min-h-dvh min-w-dvw max-h-dvh max-w-dvw;
+#root,
+body {
+	@apply min-h-dvh min-w-dvw max-h-dvh max-w-dvw overflow-hidden;
 }

@@ -8,6 +8,17 @@
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Hidden form for Netlify to detect -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="checkbox" name="service[]" />
+      <input type="radio" name="source" />
+      <textarea name="message"></textarea>
+    </form>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
