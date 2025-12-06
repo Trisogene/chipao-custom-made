@@ -68,7 +68,7 @@ const Story = () => {
 								<img
 									src={story1}
 									alt="Embroidery detail 1"
-									className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 						</StaggerItem>
@@ -77,7 +77,7 @@ const Story = () => {
 								<img
 									src={story2}
 									alt="Embroidery detail 2"
-									className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 						</StaggerItem>
@@ -86,7 +86,7 @@ const Story = () => {
 								<img
 									src={story3}
 									alt="Embroidery detail 3"
-									className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 						</StaggerItem>
@@ -95,7 +95,7 @@ const Story = () => {
 								<img
 									src={story4}
 									alt="Embroidery detail 4"
-									className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 						</StaggerItem>
@@ -137,7 +137,7 @@ const Story = () => {
 									<img
 										src={pattern1}
 										alt="Knot button pattern"
-										className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								{/* Bottom row - 3 images */}
@@ -146,21 +146,21 @@ const Story = () => {
 										<img
 											src={neck1}
 											alt="Knot button detail 1"
-											className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
 									<div className="aspect-[3/4] overflow-hidden">
 										<img
 											src={neck2}
 											alt="Knot button detail 2"
-											className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
 									<div className="aspect-[3/4] overflow-hidden">
 										<img
 											src={neck3}
 											alt="Knot button detail 3"
-											className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
 								</div>
@@ -203,14 +203,14 @@ const Story = () => {
 									<img
 										src={skirt1}
 										alt="Side vent detail 1"
-										className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								<div className="aspect-[3/4] overflow-hidden">
 									<img
 										src={skirt2}
 										alt="Side vent detail 2"
-										className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 							</div>

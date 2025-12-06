@@ -77,7 +77,7 @@ const OurProducts = () => {
 										<img
 											src={product.image}
 											alt={product.title}
-											className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+											className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
 												product.id === 1 ? "object-[center_60%]" : ""
 											}`}
 										/>

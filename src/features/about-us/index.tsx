@@ -39,14 +39,14 @@ const AboutUs = () => {
 									<img
 										src={aboutUs1}
 										alt="About Us 1"
-										className="w-full h-full object-cover object-[center_20%] hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover object-[center_20%] hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								<div className="overflow-hidden">
 									<img
 										src={aboutUs2}
 										alt="About Us 2"
-										className="w-full h-full object-cover object-[center_60%] hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover object-[center_60%] hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 							</div>

@@ -82,6 +82,19 @@ const Contact = () => {
 							data-netlify-honeypot="bot-field"
 							action="/success"
 							className="space-y-8"
+							onSubmit={(e) => {
+								// When running locally (dev), Vite server doesn't emulate Netlify's
+								// POST handling. To avoid a 404 when pressing submit, intercept
+								// the submit in development and redirect to /success, while
+								// leaving production behavior intact (Netlify handles the POST).
+								if (import.meta.env.DEV) {
+									e.preventDefault();
+									// Optionally we could gather and send data to an API, but
+									// for local dev we simply redirect to the existing success
+									// page to mimic Netlify's redirect after successful POST.
+									window.location.href = "/success";
+								}
+							}}
 						>
 							<input type="hidden" name="form-name" value="contact" />
 							<input type="hidden" name="bot-field" />
@@ -157,7 +170,7 @@ const Contact = () => {
 										{t.contact.form.lookingFor}
 									</Label>
 									<div className="space-y-3">
-										{t.contact.form.services.map((service) => (
+										{t.contact.form.services.map((service: string) => (
 											<div
 												key={service}
 												className="flex items-center space-x-3"
@@ -190,7 +203,7 @@ const Contact = () => {
 										{t.contact.form.howFound}
 									</Label>
 									<div className="space-y-3">
-										{t.contact.form.sources.map((source) => (
+										{t.contact.form.sources.map((source: string) => (
 											<div key={source} className="flex items-center space-x-3">
 												<input
 													type="radio"
