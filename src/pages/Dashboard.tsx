@@ -5,7 +5,6 @@ import OurProducts from "@/features/our-products";
 import Service from "@/features/service";
 import Story from "@/features/story";
 import Contact from "@/features/contact";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 const Dashboard = () => {
 	return (

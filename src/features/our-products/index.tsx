@@ -1,73 +1,109 @@
 import ourProduct1 from "@/assets/images/our-product-1.jpg";
 import ourProduct2 from "@/assets/images/our-product-2.jpg";
 import ourProduct3 from "@/assets/images/our-product-3.jpg";
+import {
+	FadeIn,
+	StaggerContainer,
+	StaggerItem,
+} from "@/components/animations/FadeIn";
+import { Button } from "@/components/ui/button";
+import { useFormPrefill } from "@/lib/context/FormContext";
+import { useLanguage } from "@/lib/i18n";
 
 const OurProducts = () => {
+	const { t } = useLanguage();
+	const { scrollToContactAndPrefill } = useFormPrefill();
+
 	const products = [
 		{
 			id: 1,
-			title: "BRIDAL QIPAO",
-			description:
-				"Modern love, timeless tradition. Our bridal qipaos blend the elegance of Chinese craftsmanship with the structure and softness of modern wedding design. These beautiful pieces bridge two worlds. Think ivory silks, subtle embroidery, and silhouettes that speak both languages.",
-			image: ourProduct1,
+			title: t.products.bridal.title,
+			description: t.products.bridal.description,
+			image: ourProduct3,
+			service: "Abito da Sposa",
 		},
 		{
 			id: 2,
-			title: "MODERN QIPAO",
-			description:
-				"Qipao for Daily Life. With updated cuts, playful fabrics, and minimalist detailing, our modern qipaos are designed for everyday elegance or bold styling moments. They're fashion with intention — perfect for the confident woman redefining what it means to wear Chinese style today.",
+			title: t.products.modern.title,
+			description: t.products.modern.description,
 			image: ourProduct2,
+			service: "Qipao Su Misura",
 		},
 		{
 			id: 3,
-			title: "TRADITIONAL QIPAO",
-			description:
-				"Grace in its purest form. Traditional qipaos honor the original silhouette and symbolism of Chinese dress, featuring mandarin collars, full-length cuts, and rich colors. Hand-finished embroidery. Ideal for cultural events, tea ceremonies, or those seeking a deeper connection to their roots.",
-			image: ourProduct3,
+			title: t.products.traditional.title,
+			description: t.products.traditional.description,
+			image: ourProduct1,
+			service: "Qipao Su Misura",
 		},
 	];
 
-	return (
-		<section id="products" className="p-8 bg-gray-50 border-y border-gray-200">
-			<div className="container mx-auto px-6">
-				<div className="max-w-7xl mx-auto">
-					{/* Section Title */}
-					<div className="text-center mb-8">
-						<h2
-							className="text-3xl sm:text-4xl md:text-5xl font-thin tracking-wide mb-4"
-							style={{
-								fontFamily: "GeneralSans",
-								fontWeight: "200",
-							}}
-						>
-							OUR PRODUCTS
-						</h2>
-						<p className="text-sm sm:text-base tracking-widest text-gray-600 max-w-2xl mx-auto">
-							DISCOVER OUR COLLECTION
-						</p>
-					</div>
+	const handleProductCTA = (productTitle: string, service: string) => {
+		scrollToContactAndPrefill({
+			product: productTitle,
+			service: service,
+			message: `Sono interessata al ${productTitle}`,
+		});
+	};
 
-					<div className="grid lg:grid-cols-3 gap-12">
+	return (
+		<section id="products" className="py-16 md:py-24 px-8 bg-neutral-50">
+			<div className="container mx-auto">
+				<div className="max-w-6xl mx-auto">
+					{/* Section Title */}
+					<FadeIn direction="up">
+						<div className="text-center mb-12 md:mb-16">
+							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+								{t.products.sectionLabel}
+							</p>
+							<h2
+								className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide"
+								style={{
+									fontFamily: "GeneralSans, sans-serif",
+									fontWeight: "300",
+								}}
+							>
+								{t.products.title}
+							</h2>
+						</div>
+					</FadeIn>
+
+					<StaggerContainer className="grid lg:grid-cols-3 gap-8 lg:gap-10">
 						{products.map((product) => (
-							<div key={product.id} className="space-y-6">
-								<h3 className="text-lg sm:text-xl tracking-widest font-medium text-center">
-									{product.title}
-								</h3>
-								<div className="aspect-auto lg:aspect-3/4 overflow-hidden">
-									<img
-										src={product.image}
-										alt={product.title}
-										className={`w-full h-[50dvh] object-cover rounded-md lg:h-full ${
-											product.id === 1 ? "object-[center_60%]" : ""
-										}`}
-									/>
+							<StaggerItem key={product.id}>
+								<div className="space-y-5 group">
+									{/* Image Container with CTA Overlay */}
+									<div className="aspect-3/4 overflow-hidden relative">
+										<img
+											src={product.image}
+											alt={product.title}
+											className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+												product.id === 1 ? "object-[center_60%]" : ""
+											}`}
+										/>
+										{/* CTA Overlay */}
+										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+											<Button
+												variant="outline"
+												onClick={() =>
+													handleProductCTA(product.title, product.service)
+												}
+												className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/90 hover:bg-white border-0 text-gray-600 px-6 py-5 text-base tracking-wide"
+											>
+												{t.products.cta}
+											</Button>
+										</div>
+									</div>
+									<h3 className="text-base sm:text-lg tracking-[0.2em] font-medium text-center">
+										{product.title}
+									</h3>
+									<p className="text-base leading-relaxed text-gray-600 font-light text-justify">
+										{product.description}
+									</p>
 								</div>
-								<p className="text-sm sm:text-base leading-relaxed text-gray-700 text-justify">
-									{product.description}
-								</p>
-							</div>
+							</StaggerItem>
 						))}
-					</div>
+					</StaggerContainer>
 				</div>
 			</div>
 		</section>

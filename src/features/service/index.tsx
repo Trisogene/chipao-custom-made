@@ -1,222 +1,173 @@
-import backgroundWoman from "@/assets/images/background-woman.jpg";
+import {
+	FadeIn,
+	StaggerContainer,
+	StaggerItem,
+} from "@/components/animations/FadeIn";
+import { Button } from "@/components/ui/button";
+import { useFormPrefill } from "@/lib/context/FormContext";
+import { useLanguage } from "@/lib/i18n";
 
 const Service = () => {
+	const { t } = useLanguage();
+	const { scrollToContactAndPrefill } = useFormPrefill();
+
+	const handleCustomCTA = () => {
+		scrollToContactAndPrefill({
+			service: "Qipao Su Misura",
+			message:
+				"Vorrei iniziare il processo di personalizzazione del mio qipao su misura.",
+		});
+	};
+
+	const handleRentalCTA = () => {
+		scrollToContactAndPrefill({
+			service: "Noleggio Qipao",
+			message:
+				"Vorrei prenotare un appuntamento per il servizio noleggio qipao.",
+		});
+	};
+
 	return (
-		<section
-			id="service"
-			className="p-8 relative overflow-hidden border-b border-gray-200 bg-linear-to-b from-white to-gray-50"
-		>
+		<section id="service" className="py-16 md:py-24 px-8 bg-neutral-50">
 			{/* Anchor for rental section */}
 			<div id="rental" className="absolute top-0"></div>
 
-			{/* Background Image */}
-			<div className="absolute inset-0 z-0">
-				<img
-					src={backgroundWoman}
-					alt="Background"
-					className="w-full h-full object-cover opacity-10 grayscale"
-				/>
-			</div>
-
-			<div className="container mx-auto px-6 relative z-10">
-				<div className="max-w-7xl mx-auto">
+			<div className="container mx-auto">
+				<div className="max-w-6xl mx-auto">
 					{/* Section Header */}
-					<div className="text-center mb-12">
-						<h2 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-4">
-							OUR SERVICES
-						</h2>
-						<p className="text-sm sm:text-base tracking-widest text-gray-600 max-w-2xl mx-auto">
-							CHOOSE THE SERVICE THAT BEST FITS YOUR NEEDS
-						</p>
-					</div>
+					<FadeIn direction="up">
+						<div className="text-center mb-12 md:mb-16">
+							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+								{t.service.sectionLabel}
+							</p>
+							<h2
+								className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide"
+								style={{
+									fontFamily: "GeneralSans, sans-serif",
+									fontWeight: "300",
+								}}
+							>
+								{t.service.title}
+							</h2>
+						</div>
+					</FadeIn>
 
 					{/* Services Grid */}
-					<div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+					<StaggerContainer className="grid lg:grid-cols-2 gap-8 lg:gap-12">
 						{/* Customization Service */}
-						<div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-shadow">
-							<div className="mb-6">
-								<div className="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-xs font-semibold tracking-wider mb-3">
-									CUSTOM MADE
-								</div>
-								<h3 className="text-2xl sm:text-3xl font-medium mb-2">
-									Customization Process
-								</h3>
-								<p className="text-sm text-gray-600 italic">
-									We value the collaborative process of creating together
-								</p>
-							</div>
-
-							<div className="space-y-3 lg:min-h-[360px]">
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										1
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">
-												Schedule Appointment
-											</strong>
-											<br />
-											Book your visit at our studio
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										2
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">First Visit</strong>
-											<br />
-											Measurements, fabric selection, and style discussion
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										3
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">Design Phase</strong>
-											<br />
-											One-on-one communication for exclusive design
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										4
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">Pattern Making</strong>
-											<br />
-											Sample production ensuring personalized fit
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										5
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">Fitting</strong>
-											<br />
-											Try on and review the sample
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-sm">
-										6
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">
-												Final Production
-											</strong>
-											<br />
-											Qipao production and delivery
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<div className="mt-6 pt-4 border-t border-gray-200">
-								<div className="bg-gray-50 rounded-lg p-3 space-y-1.5">
-									<p className="text-sm font-semibold text-gray-900">
-										⏱️ Lead Time: Starting from 30 days
-									</p>
-									<p className="text-xs text-red-600 font-medium">
-										⚠️ Timeline varies based on style complexity — please discuss
-										with us in advance
+						<StaggerItem>
+							<div className="bg-white p-8 md:p-10 border border-gray-100 h-full flex flex-col">
+								<div className="mb-8">
+									<span className="text-sm tracking-[0.2em] text-gray-500 uppercase">
+										{t.service.custom.label}
+									</span>
+									<h3
+										className="text-2xl sm:text-3xl font-light mt-2 mb-3"
+										style={{ fontFamily: "GeneralSans, sans-serif" }}
+									>
+										{t.service.custom.title}
+									</h3>
+									<p className="text-base text-gray-600 font-light">
+										{t.service.custom.subtitle}
 									</p>
 								</div>
+
+								<div className="space-y-5">
+									{t.service.custom.steps.map((step, index) => (
+										<div key={index} className="flex gap-4 items-start">
+											<span className="text-base font-light text-gray-400 w-6">
+												0{index + 1}
+											</span>
+											<div>
+												<p className="text-base text-gray-800 font-medium">
+													{step.title}
+												</p>
+												<p className="text-base text-gray-600 font-light">
+													{step.desc}
+												</p>
+											</div>
+										</div>
+									))}
+								</div>
+
+								<div className="mt-8 pt-6 border-t border-gray-100 grow flex flex-col justify-end">
+									<p className="text-base text-gray-700">
+										<span className="font-medium">
+											{t.service.custom.leadTime}
+										</span>{" "}
+										{t.service.custom.leadTimeValue}
+									</p>
+									<p className="text-sm text-gray-500 mt-1 font-light">
+										{t.service.custom.leadTimeNote}
+									</p>
+									<Button
+										variant="outline"
+										onClick={handleCustomCTA}
+										className="mt-6 w-full py-5 text-base border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300 tracking-wide"
+									>
+										{t.service.custom.cta}
+									</Button>
+								</div>
 							</div>
-						</div>
+						</StaggerItem>
 
 						{/* Rental Service */}
-						<div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-shadow">
-							<div className="mb-6">
-								<div className="inline-block bg-gray-700 text-white px-4 py-1 rounded-full text-xs font-semibold tracking-wider mb-3">
-									RENTAL
-								</div>
-								<h3 className="text-2xl sm:text-3xl font-medium mb-2">
-									Rental Service
-								</h3>
-								<p className="text-sm text-gray-600 italic">
-									Feel the elegance of a custom piece — with flexibility
-								</p>
-							</div>
-
-							<div className="space-y-3 lg:min-h-[360px]">
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center font-bold text-sm">
-										1
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">
-												Request Lookbook
-											</strong>
-											<br />
-											View available styles and sizes
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center font-bold text-sm">
-										2
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">
-												Book Fitting Appointment
-											</strong>
-											<br />
-											Visit our studio to try on the qipao
-										</p>
-									</div>
-								</div>
-
-								<div className="flex gap-3">
-									<div className="shrink-0 w-8 h-8 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center font-bold text-sm">
-										3
-									</div>
-									<div>
-										<p className="text-sm sm:text-base text-gray-700">
-											<strong className="text-gray-900">Pick Up</strong>
-											<br />
-											Pay refundable deposit and take the qipao
-										</p>
-									</div>
-								</div>
-
-								{/* Empty space to match height with Customization steps */}
-								<div className="hidden lg:flex space-y-4 opacity-0 pointer-events-none grow"></div>
-							</div>
-
-							<div className="mt-6 pt-4 border-t border-gray-200">
-								<div className="bg-gray-50 rounded-lg p-3 space-y-1.5">
-									<p className="text-sm font-semibold text-gray-900">
-										📅 Rental Period: 2-3 days
-									</p>
-									<p className="text-xs text-red-600 font-medium">
-										⚠️ Please return in original condition (avoid makeup stains)
+						<StaggerItem>
+							<div className="bg-white p-8 md:p-10 border border-gray-100 h-full flex flex-col">
+								<div className="mb-8">
+									<span className="text-sm tracking-[0.2em] text-gray-500 uppercase">
+										{t.service.rental.label}
+									</span>
+									<h3
+										className="text-2xl sm:text-3xl font-light mt-2 mb-3"
+										style={{ fontFamily: "GeneralSans, sans-serif" }}
+									>
+										{t.service.rental.title}
+									</h3>
+									<p className="text-base text-gray-600 font-light">
+										{t.service.rental.subtitle}
 									</p>
 								</div>
+
+								<div className="space-y-5">
+									{t.service.rental.steps.map((step, index) => (
+										<div key={index} className="flex gap-4 items-start">
+											<span className="text-base font-light text-gray-400 w-6">
+												0{index + 1}
+											</span>
+											<div>
+												<p className="text-base text-gray-800 font-medium">
+													{step.title}
+												</p>
+												<p className="text-base text-gray-600 font-light">
+													{step.desc}
+												</p>
+											</div>
+										</div>
+									))}
+								</div>
+
+								<div className="mt-8 pt-6 border-t border-gray-100 grow flex flex-col justify-end">
+									<p className="text-base text-gray-700">
+										<span className="font-medium">
+											{t.service.rental.period}
+										</span>{" "}
+										{t.service.rental.periodValue}
+									</p>
+									<p className="text-sm text-gray-500 mt-1 font-light">
+										{t.service.rental.periodNote}
+									</p>
+									<Button
+										variant="outline"
+										onClick={handleRentalCTA}
+										className="mt-6 w-full py-5 text-base border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300 tracking-wide"
+									>
+										{t.service.rental.cta}
+									</Button>
+								</div>
 							</div>
-						</div>
-					</div>
+						</StaggerItem>
+					</StaggerContainer>
 				</div>
 			</div>
 		</section>
