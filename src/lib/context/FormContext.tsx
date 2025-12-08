@@ -38,7 +38,7 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
 		// Scroll to contact section
 		const contactSection = document.getElementById("contatti");
 		if (contactSection) {
-			contactSection.scrollIntoView({ behavior: "smooth" });
+			contactSection.scrollIntoView();
 
 			// Focus on email or message field after scroll
 			setTimeout(() => {

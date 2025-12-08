@@ -12,8 +12,10 @@ export const translations = {
 		// Hero
 		hero: {
 			tagline: "CUSTOM-MADE QIPAO IN MILANO",
-			subtitle1: "Available in Europe Chinese-style wedding dress",
-			subtitle2: "Ready to make | RTW | Rent",
+			subtitle1: "Available in Europe ",
+			subtitle2: "Chinese-style wedding dress",
+			subtitle3: "Ready to make | RTW | Rent",
+			contactUs: "Contact Us",
 			cta: "Book a Consultation",
 		},
 		// Products
@@ -197,8 +199,10 @@ export const translations = {
 		// Hero
 		hero: {
 			tagline: "QIPAO SU MISURA A MILANO",
-			subtitle1: "Abiti da sposa in stile cinese disponibili in Europa",
-			subtitle2: "Su misura | Prêt-à-porter | Noleggio",
+			subtitle1: "Disponibile in Europa",
+			subtitle2: "Abito da sposa in stile cinese",
+			subtitle3: "Su misura | Pronto Moda | Noleggio",
+			contactUs: "Contattaci",
 			cta: "Prenota una Consulenza",
 		},
 		// Products

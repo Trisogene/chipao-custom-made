@@ -22,7 +22,7 @@ const Topbar = () => {
 	const scrollToSection = (id: string) => {
 		const element = document.getElementById(id);
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
+			element.scrollIntoView();
 			setIsMenuOpen(false);
 			setActiveSection(id);
 		}
@@ -67,7 +67,7 @@ const Topbar = () => {
 				<div className="flex items-center justify-between">
 					{/* Left - Brand */}
 					<div
-						className="text-[11px] tracking-[0.2em] text-gray-900 font-light cursor-pointer"
+						className="text-[13px] tracking-[0.2em] text-gray-900 font-light cursor-pointer "
 						onClick={() => scrollToSection("hero")}
 					>
 						CHI-PAO MILANO
