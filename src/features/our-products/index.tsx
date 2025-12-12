@@ -1,6 +1,6 @@
-import ourProduct1 from "@/assets/images/our-product-1.jpg";
-import ourProduct2 from "@/assets/images/our-product-2.jpg";
-import ourProduct3 from "@/assets/images/our-product-3.jpg";
+import ourProduct1 from "@/assets/images/our-product-1.webp";
+import ourProduct2 from "@/assets/images/our-product-2.webp";
+import ourProduct3 from "@/assets/images/our-product-3.webp";
 import {
 	FadeIn,
 	StaggerContainer,

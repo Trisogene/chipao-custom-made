@@ -1,5 +1,5 @@
-import aboutUs1 from "@/assets/images/about-us-1.jpg";
-import aboutUs2 from "@/assets/images/about-us-2.jpg";
+import aboutUs1 from "@/assets/images/about-us-1.webp";
+import aboutUs2 from "@/assets/images/about-us-2.webp";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { useLanguage } from "@/lib/i18n";
 

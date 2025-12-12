@@ -1,5 +1,5 @@
 import { SocialIcon } from "react-social-icons";
-import backgroundWoman from "@/assets/images/background-woman.jpg";
+import backgroundWoman from "@/assets/images/background-woman.webp";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n";

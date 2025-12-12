@@ -1,13 +1,13 @@
-import story1 from "@/assets/images/story-1.jpg";
-import story2 from "@/assets/images/story-2.jpg";
-import story3 from "@/assets/images/story-3.jpg";
-import story4 from "@/assets/images/story-4.jpg";
-import pattern1 from "@/assets/images/pattern_1.jpg";
-import neck1 from "@/assets/images/neck_1.jpg";
-import neck2 from "@/assets/images/neck_2.jpg";
-import neck3 from "@/assets/images/neck_3.jpg";
-import skirt1 from "@/assets/images/skirt_1.jpg";
-import skirt2 from "@/assets/images/skirt_2.jpg";
+import story1 from "@/assets/images/story-1.webp";
+import story2 from "@/assets/images/story-2.webp";
+import story3 from "@/assets/images/story-3.webp";
+import story4 from "@/assets/images/story-4.webp";
+import pattern1 from "@/assets/images/pattern_1.webp";
+import neck1 from "@/assets/images/neck_1.webp";
+import neck2 from "@/assets/images/neck_2.webp";
+import neck3 from "@/assets/images/neck_3.webp";
+import skirt1 from "@/assets/images/skirt_1.webp";
+import skirt2 from "@/assets/images/skirt_2.webp";
 import {
 	FadeIn,
 	StaggerContainer,
