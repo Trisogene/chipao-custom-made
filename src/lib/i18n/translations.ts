@@ -17,6 +17,8 @@ export const translations = {
 			subtitle3: "Ready to make | RTW | Rent",
 			contactUs: "Contact Us",
 			cta: "Book a Consultation",
+			exploreCatalog: "Explore Catalog",
+			bookConsultation: "Book a Free Consultation",
 		},
 		// Products
 		products: {
@@ -204,6 +206,8 @@ export const translations = {
 			subtitle3: "Su misura | Pronto Moda | Noleggio",
 			contactUs: "Contattaci",
 			cta: "Prenota una Consulenza",
+			exploreCatalog: "Esplora il Catalogo",
+			bookConsultation: "Prenota una Consulenza Gratuita",
 		},
 		// Products
 		products: {
