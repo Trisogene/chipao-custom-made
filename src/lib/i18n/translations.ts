@@ -172,6 +172,9 @@ export const translations = {
 				message: "Message",
 				messagePlaceholder: "Tell us about your vision...",
 				send: "Send Message",
+				privacyConsent: "I have read and accept the",
+				privacyPolicy: "Privacy Policy",
+				privacyRequired: "You must accept the privacy policy to continue",
 			},
 			footer: {
 				replyTime: "We usually reply within 1-2 working days.",
@@ -186,6 +189,20 @@ export const translations = {
 				followLabel: "Follow",
 				instagram: "@chipao.custommade",
 			},
+		},
+		// Global Footer
+		globalFooter: {
+			copyright: "All rights reserved.",
+			privacyPolicy: "Privacy Policy",
+			cookieSettings: "Cookie Settings",
+			madeWith: "Made with ❤️ in Milano",
+		},
+		// Success Page
+		success: {
+			title: "Thank You!",
+			message:
+				"Your message has been sent successfully. We will get back to you within 1-2 working days.",
+			backHome: "Back to Home",
 		},
 	},
 	it: {
@@ -365,6 +382,9 @@ export const translations = {
 				message: "Messaggio",
 				messagePlaceholder: "Raccontaci della tua visione...",
 				send: "Invia Messaggio",
+				privacyConsent: "Ho letto e accetto la",
+				privacyPolicy: "Privacy Policy",
+				privacyRequired: "Devi accettare la privacy policy per continuare",
 			},
 			footer: {
 				replyTime: "Di solito rispondiamo entro 1-2 giorni lavorativi.",
@@ -379,6 +399,20 @@ export const translations = {
 				followLabel: "Seguici",
 				instagram: "@chipao.custommade",
 			},
+		},
+		// Global Footer
+		globalFooter: {
+			copyright: "Tutti i diritti riservati.",
+			privacyPolicy: "Privacy Policy",
+			cookieSettings: "Impostazioni Cookie",
+			madeWith: "Fatto con ❤️ a Milano",
+		},
+		// Success Page
+		success: {
+			title: "Grazie!",
+			message:
+				"Il tuo messaggio è stato inviato con successo. Ti risponderemo entro 1-2 giorni lavorativi.",
+			backHome: "Torna alla Home",
 		},
 	},
 } as const;

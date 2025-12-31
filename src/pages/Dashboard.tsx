@@ -1,4 +1,5 @@
 import Topbar from "@/components/topbar";
+import Footer from "@/components/Footer";
 import AboutUs from "@/features/about-us";
 import Hero from "@/features/hero";
 import OurProducts from "@/features/our-products";
@@ -17,6 +18,7 @@ const Dashboard = () => {
 				<Story />
 				<Service />
 				<Contact />
+				<Footer />
 			</main>
 		</div>
 	);

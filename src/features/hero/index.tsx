@@ -36,7 +36,7 @@ const Hero = () => {
 
 	const scrollToContact = () => {
 		const target = document.getElementById("contatti");
-		target?.scrollIntoView({ block: "start", behavior: "smooth" });
+		target?.scrollIntoView({ block: "start" });
 	};
 
 	return (

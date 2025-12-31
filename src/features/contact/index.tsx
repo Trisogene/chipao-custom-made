@@ -230,6 +230,34 @@ const Contact = () => {
 								/>
 							</div>
 
+							{/* Privacy Consent - GDPR Required */}
+							<div className="space-y-2 pt-4">
+								<div className="flex items-start space-x-3">
+									<input
+										type="checkbox"
+										id="privacy-consent"
+										name="privacy-consent"
+										required
+										className="mt-1 w-4 h-4 border-gray-300 rounded-sm text-gray-900 focus:ring-gray-900 focus:ring-offset-0"
+									/>
+									<label
+										htmlFor="privacy-consent"
+										className="text-sm text-gray-600 font-light"
+									>
+										{t.contact.form.privacyConsent}{" "}
+										<a
+											href="/it/privacy"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-gray-900 underline hover:no-underline"
+										>
+											{t.contact.form.privacyPolicy}
+										</a>{" "}
+										<span className="text-gray-400">*</span>
+									</label>
+								</div>
+							</div>
+
 							{/* Submit Button */}
 							<div className="text-center pt-8">
 								<Button
