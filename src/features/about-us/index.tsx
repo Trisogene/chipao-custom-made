@@ -15,7 +15,7 @@ const AboutUs = () => {
 				{/* Section Title */}
 				<FadeIn direction="up">
 					<div className="text-center mb-12 md:mb-16">
-						<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+						<p className="text-sm sm:text-base tracking-[0.3em] text-gray-700 mb-3 uppercase">
 							{t.about.sectionLabel}
 						</p>
 						<h2
@@ -37,15 +37,21 @@ const AboutUs = () => {
 							<div className="grid grid-rows-2 gap-3 h-full max-h-[70vh] md:max-h-[80vh]">
 								<div className="overflow-hidden">
 									<img
+										loading="lazy"
 										src={aboutUs1}
 										alt="About Us 1"
+										width={600}
+										height={400}
 										className="w-full h-full object-cover object-[center_20%] hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								<div className="overflow-hidden">
 									<img
+										loading="lazy"
 										src={aboutUs2}
 										alt="About Us 2"
+										width={600}
+										height={400}
 										className="w-full h-full object-cover object-[center_60%] hover:scale-105 transition-transform duration-300"
 									/>
 								</div>

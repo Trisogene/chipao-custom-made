@@ -140,13 +140,13 @@ const PrivacyPolicy = () => {
 	const t = privacyTranslations[language];
 
 	return (
-		<div className="min-h-dvh bg-gradient-to-b from-gray-50 to-white">
+		<div className="min-h-dvh max-h-dvh overflow-hidden flex flex-col bg-gradient-to-b from-gray-50 to-white">
 			{/* Header */}
 			<header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
 				<div className="container mx-auto px-6 py-4">
 					<Link
 						to={getLocalizedPath("/")}
-						className="inline-flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
+						className="inline-flex items-center gap-2 text-sm text-gray-700 transition-colors hover:text-gray-900"
 					>
 						<ArrowLeft size={16} />
 						{t.backToHome}
@@ -154,145 +154,147 @@ const PrivacyPolicy = () => {
 				</div>
 			</header>
 
-			{/* Content */}
-			<main className="container mx-auto max-w-4xl px-6 py-12">
-				{/* Hero Section */}
-				<div className="mb-12 text-center">
-					<div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-500 to-amber-500 text-white shadow-lg">
-						<Shield size={32} />
+			<main className="grow overflow-y-auto">
+				{/* Content Wrapper */}
+				<div className="container mx-auto max-w-4xl px-6 py-12">
+					{/* Hero Section */}
+					<div className="mb-12 text-center">
+						<div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-500 to-amber-500 text-white shadow-lg">
+							<Shield size={32} />
+						</div>
+						<h1 className="mb-3 text-4xl font-light tracking-tight text-gray-900">
+							{t.title}
+						</h1>
+						<p className="text-sm text-gray-700">{t.lastUpdated}</p>
 					</div>
-					<h1 className="mb-3 text-4xl font-light tracking-tight text-gray-900">
-						{t.title}
-					</h1>
-					<p className="text-sm text-gray-500">{t.lastUpdated}</p>
+
+					{/* Sections */}
+					<div className="space-y-12">
+						{/* Intro */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<h2 className="mb-4 text-xl font-medium text-gray-900">
+								{t.intro.title}
+							</h2>
+							<p className="leading-relaxed text-gray-700">{t.intro.text}</p>
+						</section>
+
+						{/* Data Collection */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<div className="mb-4 flex items-center gap-3">
+								<Database className="text-rose-500" size={24} />
+								<h2 className="text-xl font-medium text-gray-900">
+									{t.dataCollection.title}
+								</h2>
+							</div>
+							<ul className="space-y-3">
+								{t.dataCollection.items.map((item, index) => (
+									<li
+										key={index}
+										className="flex items-start gap-3 text-gray-700"
+									>
+										<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-rose-400" />
+										<span>{item}</span>
+									</li>
+								))}
+							</ul>
+						</section>
+
+						{/* Cookies */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<div className="mb-4 flex items-center gap-3">
+								<Cookie className="text-amber-500" size={24} />
+								<h2 className="text-xl font-medium text-gray-900">
+									{t.cookies.title}
+								</h2>
+							</div>
+							<p className="mb-6 text-gray-700">{t.cookies.text}</p>
+							<div className="grid gap-4 sm:grid-cols-3">
+								{t.cookies.types.map((type, index) => (
+									<div
+										key={index}
+										className="rounded-xl bg-gray-50 p-4 transition-colors hover:bg-gray-100"
+									>
+										<h3 className="mb-2 font-medium text-gray-900">
+											{type.name}
+										</h3>
+										<p className="text-sm text-gray-700">{type.desc}</p>
+									</div>
+								))}
+							</div>
+						</section>
+
+						{/* Usage */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<div className="mb-4 flex items-center gap-3">
+								<Globe className="text-blue-500" size={24} />
+								<h2 className="text-xl font-medium text-gray-900">
+									{t.usage.title}
+								</h2>
+							</div>
+							<ul className="space-y-3">
+								{t.usage.items.map((item, index) => (
+									<li
+										key={index}
+										className="flex items-start gap-3 text-gray-700"
+									>
+										<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+										<span>{item}</span>
+									</li>
+								))}
+							</ul>
+						</section>
+
+						{/* Sharing */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<h2 className="mb-4 text-xl font-medium text-gray-900">
+								{t.sharing.title}
+							</h2>
+							<p className="leading-relaxed text-gray-700">{t.sharing.text}</p>
+						</section>
+
+						{/* Rights */}
+						<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+							<h2 className="mb-4 text-xl font-medium text-gray-900">
+								{t.rights.title}
+							</h2>
+							<p className="mb-4 text-gray-700">{t.rights.text}</p>
+							<ul className="space-y-3">
+								{t.rights.items.map((item, index) => (
+									<li
+										key={index}
+										className="flex items-start gap-3 text-gray-700"
+									>
+										<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-400" />
+										<span>{item}</span>
+									</li>
+								))}
+							</ul>
+						</section>
+
+						{/* Contact */}
+						<section className="rounded-2xl border border-gray-100 bg-gradient-to-br from-rose-50 to-amber-50 p-8 shadow-sm">
+							<div className="mb-4 flex items-center gap-3">
+								<Mail className="text-rose-500" size={24} />
+								<h2 className="text-xl font-medium text-gray-900">
+									{t.contact.title}
+								</h2>
+							</div>
+							<p className="mb-4 text-gray-700">{t.contact.text}</p>
+							<a
+								href={`mailto:${t.contact.email}`}
+								className="inline-flex items-center gap-2 font-medium text-rose-600 transition-colors hover:text-rose-700"
+							>
+								{t.contact.email}
+							</a>
+						</section>
+					</div>
 				</div>
 
-				{/* Sections */}
-				<div className="space-y-12">
-					{/* Intro */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<h2 className="mb-4 text-xl font-medium text-gray-900">
-							{t.intro.title}
-						</h2>
-						<p className="leading-relaxed text-gray-600">{t.intro.text}</p>
-					</section>
-
-					{/* Data Collection */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<div className="mb-4 flex items-center gap-3">
-							<Database className="text-rose-500" size={24} />
-							<h2 className="text-xl font-medium text-gray-900">
-								{t.dataCollection.title}
-							</h2>
-						</div>
-						<ul className="space-y-3">
-							{t.dataCollection.items.map((item, index) => (
-								<li
-									key={index}
-									className="flex items-start gap-3 text-gray-600"
-								>
-									<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-rose-400" />
-									<span>{item}</span>
-								</li>
-							))}
-						</ul>
-					</section>
-
-					{/* Cookies */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<div className="mb-4 flex items-center gap-3">
-							<Cookie className="text-amber-500" size={24} />
-							<h2 className="text-xl font-medium text-gray-900">
-								{t.cookies.title}
-							</h2>
-						</div>
-						<p className="mb-6 text-gray-600">{t.cookies.text}</p>
-						<div className="grid gap-4 sm:grid-cols-3">
-							{t.cookies.types.map((type, index) => (
-								<div
-									key={index}
-									className="rounded-xl bg-gray-50 p-4 transition-colors hover:bg-gray-100"
-								>
-									<h3 className="mb-2 font-medium text-gray-900">
-										{type.name}
-									</h3>
-									<p className="text-sm text-gray-600">{type.desc}</p>
-								</div>
-							))}
-						</div>
-					</section>
-
-					{/* Usage */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<div className="mb-4 flex items-center gap-3">
-							<Globe className="text-blue-500" size={24} />
-							<h2 className="text-xl font-medium text-gray-900">
-								{t.usage.title}
-							</h2>
-						</div>
-						<ul className="space-y-3">
-							{t.usage.items.map((item, index) => (
-								<li
-									key={index}
-									className="flex items-start gap-3 text-gray-600"
-								>
-									<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
-									<span>{item}</span>
-								</li>
-							))}
-						</ul>
-					</section>
-
-					{/* Sharing */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<h2 className="mb-4 text-xl font-medium text-gray-900">
-							{t.sharing.title}
-						</h2>
-						<p className="leading-relaxed text-gray-600">{t.sharing.text}</p>
-					</section>
-
-					{/* Rights */}
-					<section className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-						<h2 className="mb-4 text-xl font-medium text-gray-900">
-							{t.rights.title}
-						</h2>
-						<p className="mb-4 text-gray-600">{t.rights.text}</p>
-						<ul className="space-y-3">
-							{t.rights.items.map((item, index) => (
-								<li
-									key={index}
-									className="flex items-start gap-3 text-gray-600"
-								>
-									<span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-400" />
-									<span>{item}</span>
-								</li>
-							))}
-						</ul>
-					</section>
-
-					{/* Contact */}
-					<section className="rounded-2xl border border-gray-100 bg-gradient-to-br from-rose-50 to-amber-50 p-8 shadow-sm">
-						<div className="mb-4 flex items-center gap-3">
-							<Mail className="text-rose-500" size={24} />
-							<h2 className="text-xl font-medium text-gray-900">
-								{t.contact.title}
-							</h2>
-						</div>
-						<p className="mb-4 text-gray-600">{t.contact.text}</p>
-						<a
-							href={`mailto:${t.contact.email}`}
-							className="inline-flex items-center gap-2 font-medium text-rose-600 transition-colors hover:text-rose-700"
-						>
-							{t.contact.email}
-						</a>
-					</section>
-				</div>
+				{/* Footer inside scrollable area for consistent experience */}
+				<footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-700">
+					© {new Date().getFullYear()} Chipao Custom Made. All rights reserved.
+				</footer>
 			</main>
-
-			{/* Footer */}
-			<footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-500">
-				© {new Date().getFullYear()} Chipao Custom Made. All rights reserved.
-			</footer>
 		</div>
 	);
 };

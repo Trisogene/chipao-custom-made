@@ -12,7 +12,7 @@ const Footer = () => {
 	return (
 		<footer className="bg-gray-100 border-t border-gray-200 py-6 px-6">
 			<div className="container mx-auto max-w-6xl">
-				<div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+				<div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-700">
 					{/* Copyright */}
 					<p>
 						© {new Date().getFullYear()} Chipao Custom Made.{" "}
@@ -27,7 +27,7 @@ const Footer = () => {
 						>
 							{t.globalFooter.privacyPolicy}
 						</Link>
-						<span className="text-gray-300">|</span>
+						<span className="text-gray-400">|</span>
 						<button
 							type="button"
 							onClick={handleResetCookies}

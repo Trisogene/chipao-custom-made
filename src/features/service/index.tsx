@@ -37,7 +37,7 @@ const Service = () => {
 					{/* Section Header */}
 					<FadeIn direction="up">
 						<div className="text-center mb-12 md:mb-16">
-							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-700 mb-3 uppercase">
 								{t.service.sectionLabel}
 							</p>
 							<h2
@@ -58,7 +58,7 @@ const Service = () => {
 						<StaggerItem>
 							<div className="bg-white p-8 md:p-10 border border-gray-100 h-full flex flex-col">
 								<div className="mb-8">
-									<span className="text-sm tracking-[0.2em] text-gray-500 uppercase">
+									<span className="text-sm tracking-[0.2em] text-gray-700 uppercase">
 										{t.service.custom.label}
 									</span>
 									<h3
@@ -67,7 +67,7 @@ const Service = () => {
 									>
 										{t.service.custom.title}
 									</h3>
-									<p className="text-base text-gray-600 font-light">
+									<p className="text-base text-gray-700 font-light">
 										{t.service.custom.subtitle}
 									</p>
 								</div>
@@ -75,14 +75,14 @@ const Service = () => {
 								<div className="space-y-5">
 									{t.service.custom.steps.map((step, index) => (
 										<div key={index} className="flex gap-4 items-start">
-											<span className="text-base font-light text-gray-400 w-6">
+											<span className="text-base font-light text-gray-700 w-6">
 												0{index + 1}
 											</span>
 											<div>
 												<p className="text-base text-gray-800 font-medium">
 													{step.title}
 												</p>
-												<p className="text-base text-gray-600 font-light">
+												<p className="text-base text-gray-700 font-light">
 													{step.desc}
 												</p>
 											</div>
@@ -97,7 +97,7 @@ const Service = () => {
 										</span>{" "}
 										{t.service.custom.leadTimeValue}
 									</p>
-									<p className="text-sm text-gray-500 mt-1 font-light">
+									<p className="text-sm text-gray-700 mt-1 font-light">
 										{t.service.custom.leadTimeNote}
 									</p>
 									<Button
@@ -115,7 +115,7 @@ const Service = () => {
 						<StaggerItem>
 							<div className="bg-white p-8 md:p-10 border border-gray-100 h-full flex flex-col">
 								<div className="mb-8">
-									<span className="text-sm tracking-[0.2em] text-gray-500 uppercase">
+									<span className="text-sm tracking-[0.2em] text-gray-700 uppercase">
 										{t.service.rental.label}
 									</span>
 									<h3
@@ -124,7 +124,7 @@ const Service = () => {
 									>
 										{t.service.rental.title}
 									</h3>
-									<p className="text-base text-gray-600 font-light">
+									<p className="text-base text-gray-700 font-light">
 										{t.service.rental.subtitle}
 									</p>
 								</div>
@@ -132,14 +132,14 @@ const Service = () => {
 								<div className="space-y-5">
 									{t.service.rental.steps.map((step, index) => (
 										<div key={index} className="flex gap-4 items-start">
-											<span className="text-base font-light text-gray-400 w-6">
+											<span className="text-base font-light text-gray-700 w-6">
 												0{index + 1}
 											</span>
 											<div>
 												<p className="text-base text-gray-800 font-medium">
 													{step.title}
 												</p>
-												<p className="text-base text-gray-600 font-light">
+												<p className="text-base text-gray-700 font-light">
 													{step.desc}
 												</p>
 											</div>
@@ -154,7 +154,7 @@ const Service = () => {
 										</span>{" "}
 										{t.service.rental.periodValue}
 									</p>
-									<p className="text-sm text-gray-500 mt-1 font-light">
+									<p className="text-sm text-gray-700 mt-1 font-light">
 										{t.service.rental.periodNote}
 									</p>
 									<Button

@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/src/assets/fonts/ROSSETA.TTF" as="font" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" href="/src/assets/fonts/GeneralSans-Variable.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" href="/src/assets/fonts/chinese-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="https://drive.google.com" />
+    <link rel="preconnect" href="https://drive.google.com" crossorigin />
+    
     <!-- Primary Meta Tags -->
     <title>Chipao Custom Made | Qipao Su Misura a Milano</title>
     <meta name="title" content="Chipao Custom Made | Qipao Su Misura a Milano" />
@@ -33,6 +42,17 @@
     
     <!-- Canonical -->
     <link rel="canonical" href="https://chipaocustommade.com/" />
+    
+    <script>
+      (function() {
+        var lang = window.location.pathname.split('/')[1];
+        if (lang === 'en' || lang === 'it') {
+          document.documentElement.lang = lang;
+        } else {
+          document.documentElement.lang = 'it';
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

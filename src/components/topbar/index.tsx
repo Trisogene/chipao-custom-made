@@ -82,7 +82,7 @@ const Topbar = () => {
 								className={`text-[11px] tracking-[0.15em] transition-all duration-300 font-light ${
 									activeSection === item.id
 										? "text-gray-900 border-b border-gray-900 pb-0.5"
-										: "text-gray-500 hover:text-gray-900"
+										: "text-gray-700 hover:text-gray-900"
 								}`}
 							>
 								{item.label}
@@ -97,7 +97,7 @@ const Topbar = () => {
 							className={`px-1.5 py-0.5 transition-colors ${
 								language === "it"
 									? "text-gray-900 border-b border-gray-900"
-									: "text-gray-400 hover:text-gray-600"
+									: "text-gray-600 hover:text-gray-900"
 							}`}
 						>
 							IT
@@ -108,7 +108,7 @@ const Topbar = () => {
 							className={`px-1.5 py-0.5 transition-colors ${
 								language === "en"
 									? "text-gray-900 border-b border-gray-900"
-									: "text-gray-400 hover:text-gray-600"
+									: "text-gray-600 hover:text-gray-900"
 							}`}
 						>
 							EN
@@ -141,7 +141,7 @@ const Topbar = () => {
 								className={`block w-full text-left py-3 text-[11px] tracking-[0.15em] transition-colors font-light ${
 									activeSection === item.id
 										? "text-gray-900 border-l-2 border-gray-900 pl-3"
-										: "text-gray-500 pl-3"
+										: "text-gray-700 pl-3"
 								}`}
 							>
 								{item.label}
@@ -154,7 +154,7 @@ const Topbar = () => {
 								className={`text-[11px] tracking-[0.15em] font-light px-2 py-1 ${
 									language === "it"
 										? "text-gray-900 border-b border-gray-900"
-										: "text-gray-400"
+										: "text-gray-700"
 								}`}
 							>
 								Italiano
@@ -164,7 +164,7 @@ const Topbar = () => {
 								className={`text-[11px] tracking-[0.15em] font-light px-2 py-1 ${
 									language === "en"
 										? "text-gray-900 border-b border-gray-900"
-										: "text-gray-400"
+										: "text-gray-700"
 								}`}
 							>
 								English

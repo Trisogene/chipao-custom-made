@@ -6,6 +6,7 @@ import OurProducts from "@/features/our-products";
 import Service from "@/features/service";
 import Story from "@/features/story";
 import Contact from "@/features/contact";
+import Testimonials from "@/features/testimonials";
 
 const Dashboard = () => {
 	return (
@@ -17,6 +18,7 @@ const Dashboard = () => {
 				<AboutUs />
 				<Story />
 				<Service />
+				<Testimonials />
 				<Contact />
 				<Footer />
 			</main>

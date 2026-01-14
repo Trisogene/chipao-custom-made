@@ -53,7 +53,7 @@ const OurProducts = () => {
 					{/* Section Title */}
 					<FadeIn direction="up">
 						<div className="text-center mb-12 md:mb-16">
-							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-700 mb-3 uppercase">
 								{t.products.sectionLabel}
 							</p>
 							<h2
@@ -75,8 +75,11 @@ const OurProducts = () => {
 									{/* Image Container with CTA Overlay */}
 									<div className="aspect-3/4 overflow-hidden relative">
 										<img
+											loading="lazy"
 											src={product.image}
 											alt={product.title}
+											width={600}
+											height={800}
 											className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
 												product.id === 1 ? "object-[center_60%]" : ""
 											}`}
@@ -88,7 +91,7 @@ const OurProducts = () => {
 												onClick={() =>
 													handleProductCTA(product.title, product.service)
 												}
-												className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/90 hover:bg-white border-0 text-gray-600 px-6 py-5 text-base tracking-wide"
+												className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/90 hover:bg-white border-0 text-gray-800 px-6 py-5 text-base tracking-wide"
 											>
 												{t.products.cta}
 											</Button>
@@ -97,7 +100,7 @@ const OurProducts = () => {
 									<h3 className="text-base sm:text-lg tracking-[0.2em] font-medium text-center">
 										{product.title}
 									</h3>
-									<p className="text-base leading-relaxed text-gray-600 font-light text-justify">
+									<p className="text-base leading-relaxed text-gray-800 font-light text-justify">
 										{product.description}
 									</p>
 								</div>

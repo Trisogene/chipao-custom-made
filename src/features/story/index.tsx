@@ -26,7 +26,7 @@ const Story = () => {
 			{/* Section Title */}
 			<FadeIn direction="up">
 				<div className="text-center mb-12 md:mb-16">
-					<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+					<p className="text-sm sm:text-base tracking-[0.3em] text-gray-700 mb-3 uppercase">
 						{t.story.sectionLabel}
 					</p>
 					<h2
@@ -48,13 +48,13 @@ const Story = () => {
 					<FadeIn direction="left" delay={0.2}>
 						<div className="space-y-6 md:space-y-8 order-2 md:order-1">
 							<div className="space-y-5">
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.paragraph1}
 								</p>
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.paragraph2}
 								</p>
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.paragraph3}
 								</p>
 							</div>
@@ -66,8 +66,11 @@ const Story = () => {
 						<StaggerItem>
 							<div className="aspect-square overflow-hidden">
 								<img
+									loading="lazy"
 									src={story1}
 									alt="Embroidery detail 1"
+									width={400}
+									height={400}
 									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
@@ -75,8 +78,11 @@ const Story = () => {
 						<StaggerItem>
 							<div className="aspect-square overflow-hidden">
 								<img
+									loading="lazy"
 									src={story2}
 									alt="Embroidery detail 2"
+									width={400}
+									height={400}
 									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
@@ -84,8 +90,11 @@ const Story = () => {
 						<StaggerItem>
 							<div className="aspect-square overflow-hidden">
 								<img
+									loading="lazy"
 									src={story3}
 									alt="Embroidery detail 3"
+									width={400}
+									height={400}
 									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
@@ -93,8 +102,11 @@ const Story = () => {
 						<StaggerItem>
 							<div className="aspect-square overflow-hidden">
 								<img
+									loading="lazy"
 									src={story4}
 									alt="Embroidery detail 4"
+									width={400}
+									height={400}
 									className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
@@ -120,10 +132,10 @@ const Story = () => {
 						{/* Text Left */}
 						<FadeIn direction="left" delay={0.2}>
 							<div className="space-y-5">
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.knotButtons.paragraph1}
 								</p>
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.knotButtons.paragraph2}
 								</p>
 							</div>
@@ -135,8 +147,11 @@ const Story = () => {
 								{/* Top large image */}
 								<div className="aspect-[4/3] overflow-hidden">
 									<img
+										loading="lazy"
 										src={pattern1}
 										alt="Knot button pattern"
+										width={800}
+										height={600}
 										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
@@ -144,22 +159,31 @@ const Story = () => {
 								<div className="grid grid-cols-3 gap-3">
 									<div className="aspect-[3/4] overflow-hidden">
 										<img
+											loading="lazy"
 											src={neck1}
 											alt="Knot button detail 1"
+											width={300}
+											height={400}
 											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
 									<div className="aspect-[3/4] overflow-hidden">
 										<img
+											loading="lazy"
 											src={neck2}
 											alt="Knot button detail 2"
+											width={300}
+											height={400}
 											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
 									<div className="aspect-[3/4] overflow-hidden">
 										<img
+											loading="lazy"
 											src={neck3}
 											alt="Knot button detail 3"
+											width={300}
+											height={400}
 											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										/>
 									</div>
@@ -187,10 +211,10 @@ const Story = () => {
 						{/* Text Left */}
 						<FadeIn direction="left" delay={0.2}>
 							<div className="space-y-5">
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.boundSeam.paragraph1}
 								</p>
-								<p className="text-base md:text-lg leading-relaxed text-gray-700 font-light text-justify">
+								<p className="text-base md:text-lg leading-relaxed text-gray-800 font-light text-justify">
 									{t.story.boundSeam.paragraph2}
 								</p>
 							</div>
@@ -201,15 +225,21 @@ const Story = () => {
 							<div className="grid grid-cols-2 gap-4">
 								<div className="aspect-[3/4] overflow-hidden">
 									<img
+										loading="lazy"
 										src={skirt1}
 										alt="Side vent detail 1"
+										width={300}
+										height={400}
 										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								<div className="aspect-[3/4] overflow-hidden">
 									<img
+										loading="lazy"
 										src={skirt2}
 										alt="Side vent detail 2"
+										width={300}
+										height={400}
 										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 									/>
 								</div>

@@ -190,6 +190,45 @@ export const translations = {
 				instagram: "@chipao.custommade",
 			},
 		},
+		// Testimonials
+		testimonials: {
+			sectionLabel: "Testimonials",
+			title: "WHAT OUR CLIENTS SAY",
+			subtitle:
+				"Real stories from women who trusted us with their special moments",
+			reviews: [
+				{
+					name: "Giulia M.",
+					location: "Milano",
+					text: "The qipao they made for my wedding was beyond my dreams. Every detail was perfect, and the team understood exactly what I wanted.",
+					rating: 5,
+				},
+				{
+					name: "Yuki T.",
+					location: "Roma",
+					text: "As a second-generation Chinese woman, I finally found someone who could create a qipao that honors my heritage while fitting my modern style.",
+					rating: 5,
+				},
+				{
+					name: "Sofia R.",
+					location: "Firenze",
+					text: "Exceptional craftsmanship! The rental service was perfect for my engagement party. Professional and elegant from start to finish.",
+					rating: 5,
+				},
+				{
+					name: "Lin W.",
+					location: "Torino",
+					text: "They created a beautiful traditional qipao for my tea ceremony. The embroidery work was absolutely stunning.",
+					rating: 5,
+				},
+				{
+					name: "Elena C.",
+					location: "Venezia",
+					text: "Professional, attentive, and truly passionate about what they do. My custom qipao fits like it was born for me.",
+					rating: 5,
+				},
+			],
+		},
 		// Global Footer
 		globalFooter: {
 			copyright: "All rights reserved.",
@@ -399,6 +438,45 @@ export const translations = {
 				followLabel: "Seguici",
 				instagram: "@chipao.custommade",
 			},
+		},
+		// Testimonials
+		testimonials: {
+			sectionLabel: "Testimonianze",
+			title: "COSA DICONO LE NOSTRE CLIENTI",
+			subtitle:
+				"Storie vere di donne che ci hanno affidato i loro momenti speciali",
+			reviews: [
+				{
+					name: "Giulia M.",
+					location: "Milano",
+					text: "Il qipao che hanno realizzato per il mio matrimonio ha superato ogni mia aspettativa. Ogni dettaglio era perfetto e il team ha capito esattamente cosa volevo.",
+					rating: 5,
+				},
+				{
+					name: "Yuki T.",
+					location: "Roma",
+					text: "Come donna cinese di seconda generazione, ho finalmente trovato qualcuno che potesse creare un qipao che onora le mie radici adattandosi al mio stile moderno.",
+					rating: 5,
+				},
+				{
+					name: "Sofia R.",
+					location: "Firenze",
+					text: "Artigianato eccezionale! Il servizio noleggio è stato perfetto per la mia festa di fidanzamento. Professionale ed elegante dall'inizio alla fine.",
+					rating: 5,
+				},
+				{
+					name: "Lin W.",
+					location: "Torino",
+					text: "Hanno creato un bellissimo qipao tradizionale per la mia cerimonia del tè. Il lavoro di ricamo era assolutamente stupendo.",
+					rating: 5,
+				},
+				{
+					name: "Elena C.",
+					location: "Venezia",
+					text: "Professionali, attenti e veramente appassionati di ciò che fanno. Il mio qipao su misura veste come se fosse nato per me.",
+					rating: 5,
+				},
+			],
 		},
 		// Global Footer
 		globalFooter: {

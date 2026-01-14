@@ -55,7 +55,7 @@ const Contact = () => {
 					{/* Header */}
 					<FadeIn direction="up">
 						<div className="text-center mb-12 md:mb-16">
-							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-500 mb-3 uppercase">
+							<p className="text-sm sm:text-base tracking-[0.3em] text-gray-700 mb-3 uppercase">
 								{t.contact.sectionLabel}
 							</p>
 							<h2
@@ -67,7 +67,7 @@ const Contact = () => {
 							>
 								{t.contact.title}
 							</h2>
-							<p className="text-base text-gray-600 font-light max-w-xl mx-auto">
+							<p className="text-base text-gray-700 font-light max-w-xl mx-auto">
 								{t.contact.subtitle}
 							</p>
 						</div>
@@ -91,10 +91,10 @@ const Contact = () => {
 								<div className="space-y-2">
 									<Label
 										htmlFor="fullName"
-										className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal"
+										className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal"
 									>
 										{t.contact.form.fullName}{" "}
-										<span className="text-gray-400">
+										<span className="text-gray-500">
 											{t.contact.form.required}
 										</span>
 									</Label>
@@ -111,10 +111,10 @@ const Contact = () => {
 								<div className="space-y-2">
 									<Label
 										htmlFor="email"
-										className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal"
+										className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal"
 									>
 										{t.contact.form.email}{" "}
-										<span className="text-gray-400">
+										<span className="text-gray-500">
 											{t.contact.form.required}
 										</span>
 									</Label>
@@ -133,10 +133,10 @@ const Contact = () => {
 							<div className="space-y-2">
 								<Label
 									htmlFor="phone"
-									className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal"
+									className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal"
 								>
 									{t.contact.form.phone}{" "}
-									<span className="text-gray-400 normal-case tracking-normal">
+									<span className="text-gray-500 normal-case tracking-normal">
 										{t.contact.form.phoneNote}
 									</span>
 								</Label>
@@ -153,7 +153,7 @@ const Contact = () => {
 							<div className="grid md:grid-cols-2 gap-8 pt-4">
 								{/* What are you looking for */}
 								<div className="space-y-4">
-									<Label className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal">
+									<Label className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal">
 										{t.contact.form.lookingFor}
 									</Label>
 									<div className="space-y-3">
@@ -186,7 +186,7 @@ const Contact = () => {
 
 								{/* How did you hear about us */}
 								<div className="space-y-4">
-									<Label className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal">
+									<Label className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal">
 										{t.contact.form.howFound}
 									</Label>
 									<div className="space-y-3">
@@ -215,7 +215,7 @@ const Contact = () => {
 							<div className="space-y-2 pt-4">
 								<Label
 									htmlFor="message"
-									className="text-sm tracking-[0.15em] text-gray-600 uppercase font-normal"
+									className="text-sm tracking-[0.15em] text-gray-700 uppercase font-normal"
 								>
 									{t.contact.form.message}
 								</Label>
@@ -242,7 +242,7 @@ const Contact = () => {
 									/>
 									<label
 										htmlFor="privacy-consent"
-										className="text-sm text-gray-600 font-light"
+										className="text-sm text-gray-700 font-light"
 									>
 										{t.contact.form.privacyConsent}{" "}
 										<a
@@ -253,7 +253,7 @@ const Contact = () => {
 										>
 											{t.contact.form.privacyPolicy}
 										</a>{" "}
-										<span className="text-gray-400">*</span>
+										<span className="text-gray-500">*</span>
 									</label>
 								</div>
 							</div>
@@ -273,13 +273,13 @@ const Contact = () => {
 					{/* Footer Info */}
 					<FadeIn direction="up" delay={0.4}>
 						<div className="mt-16 pt-12 border-t border-gray-100 text-center space-y-2">
-							<p className="text-base text-gray-500 font-light">
+							<p className="text-base text-gray-700 font-light">
 								{t.contact.footer.replyTime}
 							</p>
-							<p className="text-base text-gray-500 font-light">
+							<p className="text-base text-gray-700 font-light">
 								{t.contact.footer.appointmentOnly}
 							</p>
-							<p className="text-base text-gray-500 font-light">
+							<p className="text-base text-gray-700 font-light">
 								{t.contact.footer.urgent}
 							</p>
 						</div>
@@ -290,7 +290,7 @@ const Contact = () => {
 						<div className="grid md:grid-cols-3 gap-8 text-center">
 							<StaggerItem>
 								<div>
-									<p className="text-sm tracking-[0.2em] text-gray-400 uppercase mb-2">
+									<p className="text-sm tracking-[0.2em] text-gray-700 uppercase mb-2">
 										{t.contact.footer.emailLabel}
 									</p>
 									<p className="text-base text-gray-700 font-light">
@@ -300,7 +300,7 @@ const Contact = () => {
 							</StaggerItem>
 							<StaggerItem>
 								<div>
-									<p className="text-sm tracking-[0.2em] text-gray-400 uppercase mb-2">
+									<p className="text-sm tracking-[0.2em] text-gray-700 uppercase mb-2">
 										{t.contact.footer.locationLabel}
 									</p>
 									<p className="text-base text-gray-700 font-light">
@@ -310,7 +310,7 @@ const Contact = () => {
 							</StaggerItem>
 							<StaggerItem>
 								<div>
-									<p className="text-sm tracking-[0.2em] text-gray-400 uppercase mb-2">
+									<p className="text-sm tracking-[0.2em] text-gray-700 uppercase mb-2">
 										{t.contact.footer.followLabel}
 									</p>
 									<a

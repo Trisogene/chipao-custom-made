@@ -3,6 +3,7 @@ import {
 	useContext,
 	useCallback,
 	useMemo,
+	useEffect,
 	type ReactNode,
 } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
@@ -31,6 +32,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 	// Determine the current language from URL, default to 'it'
 	const language: Language = isValidLanguage(lang) ? lang : "it";
+
+	// Update the HTML lang attribute dynamically for SEO and Accessibility
+	useEffect(() => {
+		document.documentElement.lang = language;
+	}, [language]);
 
 	const setLanguage = useCallback(
 		(newLang: Language) => {
